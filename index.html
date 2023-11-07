@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Fundamentals</title>
+
+    <style>
+
+        .box{
+            width: 30%;
+            margin: auto;
+        }
+        input{
+            width: 100%;
+            margin: 100px 0px 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    
+    <div class="box">
+        <input type="color" id="clr" value="#ff0000">
+    </div>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#clr').on('input', function () {
+                // $('h1').css('color', clr);
+                var clr = $('#clr').val();
+                $('body').css('background', clr);
+
+            });
+        });
+    </script>
+</body>
+
+</html>
